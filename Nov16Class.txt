@@ -1,0 +1,170 @@
+1. Constructors
+2. this
+3. Inheritance 
+4. Abstract Classes and Interfaces
+
+Constructor: It is the building block of the objects.
+Constructor will be executed every time when the object is created.
+
+constructor name is same as that of class name
+constructor doesnt have any return type
+constructors can wihtout parameters or with parameters
+zero parameterised constructors are called default constructors.
+parameterised constructor are used to define the rule while creating the objects
+constructors can be of any acess specifier public, private, protected or default
+if we make any constructor as private, then that class becomes singleton, means,
+we cannot create any object for that class.
+
+
+Employee 
+name,empid
+
+Student
+name,branch,
+
+this is a keyword which refers to the current object 
+this can also acts like a method, to call one form of constructor to antoher form of constructor.
+
+1. this must be the first line of code in the constructor.
+2. this cannot be recursively called.
+3. this cannot form a cycle.
+
+constructor, static , non static 
+
+static ----> non static ---> constructor
+static block is executed whenever the .class file is loaded into memory.
+non static block is exectued whenever the object is created and before the cosntructor is called.
+constructor is called just when ever the object is created.
+
+It is the process of acquring the properties from one entity to another entity
+the class which is givig properties is called base or parent class, the class which is acquring the properties
+is called derived or child class
+
+super is a keyword is used to refer the its immediate parent variable or method or constructor.
+
+Overriding: The process of supressing base class data / method in the derived class when both are having
+the same name or signature.
+
+Method Overriding; The process of supressing the base class method in the derived class when both are having
+the same signature
+
+Data Overriding: The process of supressing the base class value in the derived class when both are having the
+same name.
+
+Object class -  Super class of all classes in Java including user defined classes
+Method s in object class
+----------------------------------
+
+1. public Object clone();
+2. public boolean equals();
+3. publc int hashCode();
+4. public String toString()
+5. public void notify()
+6. public void notifyAll()
+7. diff forms of wait() method
+
+
+Abstract Classes
+-----------------------
+Abstract class is a class which consists of abstract methods.
+abstract method is a method without having the implementation.
+If we need diff implementations for same method in diff classes, 
+
+Few Points :
+
+1. We cannot create objects directly for the abstract class.
+2. we can declare the constructors.
+3. we can declare the instance variables.
+
+
+final
+-------
+1. variables -- It becomes  a constant
+2. method  --  It cannot be overriden
+3. class  --  It cannot be inherited.
+
+Access specifiers are used to provide the diff levels of security to the data and methods in the class.
+private   ---> protected ---->      ---> public
+
+
+Interfaces
+--------------
+Interfaces are java elements which consits of all abstract methods.
+1. All the methods in interfaces are abstract and public.
+2. we cannot write constructor.
+3. We cannot declare variables but we can initalize constants
+4. we cannot create objects directly for interfaces.
+
+Lambda Expressions
+------------------------------
+Funtional Interfaces : an interface with only one abstract method.
+Lambda expressions are used to implement funtional interfaces
+Lambda expression is simply an unanimous method
+
+Runnable  -- run()
+Comparator -- compareTo()
+Comaparable  -- compare
+
+1. A lambda expression doesnot have any name
+2. A lamba expression doesnt have any accesss specifier or any return type.
+3.  -> is used to seperate the paramaters with body
+4. If the body has only one line, block paranthesis is not required.
+
+public void display(){
+System.out.println("Hello World");
+}
+
+
+() ->  System.out.println("Hello World");
+
+public void  add(int a, int b)
+{
+    int c = a+b;
+	System.out.println("The sum is "+c);
+}
+
+(int a, int b)  -> System.out.println("The sum is "+(a+b));
+A  lambda expression parameters doesnot need datatype declaration.
+
+(a,b)->{
+			int c=a+b;
+			System.out.println("The sum is "+c);
+		}
+		
+		
+public int add(int a, int b){
+		return a+b;
+}
+
+(a,b)->return a+b;
+If the lambda expression only one return statement, then return keyword is also not required
+
+(a,b)->a+b;
+
+
+public boolean test(int a, int b)
+{
+	 if(a<b)
+		return true;
+	else
+		return false;
+}
+
+(a,b)-> a<b;
+
+
+Predefined utility Functional Interfaces in java8
+----------------------------------------------------------
+1. Predicate  -- test
+2. Function  -- apply 
+3. Consumer  -- 
+4. Producer -- 
+
+5. BiPredicate
+6. BiFunction
+
+
+
+
+
+

@@ -1,0 +1,216 @@
+1. Write a java program to read a number and check whether it is prime number or not?
+
+2. Write a program to reverse the given the number.
+
+3. Write a program to perform matrix addtion for 2x2 matrices.
+
+4. Write a program to read a string and count the number of vowels in it.
+
+5. write a program to find the given string is  pallindrome or not?
+
+
+
+1. Scanner class  -- util package
+2. BufferedReader class
+
+
+123/10  ---  3
+reverse =3
+12/10  -- 2
+3x10+2  = 32
+1
+1%10=1
+32*10 + 1= 321
+0
+
+
+1   2   3
+
+4    5    6
+
+7     8   9
+
+
+Making the programmable element as if it behaves like a real time entity.
+
+Procedure Oriented
+Logic Orietned
+Functional
+OOP
+Script
+
+Features of OOPS
+------------------------
+1. class  -- It is the collection of objects having the similar properties.
+Logical entity
+
+data and methods
+
+
+ears, legs, nose, hands;
+
+
+class HumanBein
+		
+		walking(){
+		
+		}
+		eating(){
+		
+		}
+		sleeping(){
+		
+		}
+	}
+
+
+2. Object  --  It is an instance of the class 
+Physical entity
+
+The class will exists in the form of objects.
+y = mx+c
+ y = 4x+9
+ 
+ 
+ 3. Encapsulation: Wrapping up of data in single unit.
+ The process of combining the both data and methods in a single unit called class. 
+ is used for abstraction.
+ 
+Abstraction : is selective hiding and selective display
+
+Inheritacne: It is process of acquring the features from one entity to anther entity.
+For code resuability
+
+Relations:
+
+Is-a  -- Inheritacne
+
+Has-a  -- We shall pass one class object as a parameter to another class method.
+
+Uses --  We shall use one class object into another class directly.
+class Address{
+	int dno;
+	String street, city, state , pin;
+}
+
+class Person{
+	string name, id;
+	public displayData(Address address)
+	{
+	// display all the data, name, id, dno, state, street,pin
+	}
+}
+
+
+		
+class Person{
+	string name, id;
+	Address address;
+}   losely coupled code.
+
+	
+
+class Person  extends Address {
+		String name;
+		String id;
+		
+}
+
+class Employee  extends Address {
+	String empname;
+	String dept;
+	
+}
+
+
+
+
+
+
+
+
+3. Encapsulation
+4. Inheritance
+5. Abstraction
+6. Polymorphism  : 
+
+We will identify every object by its behaviour only, so if we group the objects with same behaviour then
+that group is called class.
+
+Polymorphism: The ability of an entity to exists in more than one form.
+
+Runtime : Overriding - Method, Data
+Compile  -- Method Overloading.
+
+Two or more methods are said to be overloaded, iff they have same method names and differ in 
+any one of the following;
+1. Either in the number of parameters
+2. Either in the type of parametes
+3. Either in the order of parameters
+
+
+class Jdbc{
+
+    public void loadDriver(){    // load the driver code  }
+	public void doConnection(int a, int b){   }
+	public void getData(int a, char b){  }
+	public void closeConnections(char a, char b){  }
+	static{
+			class.forName("drivename");
+	}
+}
+
+clas Jdbc{
+	public void test(int a,int b){  }
+	public int test(int a, int b) {  }
+	public char test(int a, int b) [  }
+}
+
+class Jdbc{
+		public void test(char d, int c){ }
+		public  void test(char a, int b){  }
+	}
+	
+	Jdbc jdbc = new Jdbc();
+	jdbc.test('a','b');
+
+
+
+
+
+class
+
+
+1. Eror
+2. It prints box
+3. It calls the box class
+
+
+Classnmae objname = new Classname();
+
+
+when ever we create an object, memroy will allocated only to variables, ie data not for methods
+When ever objects are created,
+1. The .class file is loaded into memory  // static block will be executed.
+2. intantiation
+3. Initialization
+
+instance variables 
+method variables
+static variables  --  
+which can be applied on 3 levels
+1. variables
+2. method
+3. block
+
+If static is applied on a method, then that method can be called directly on the class without creating the object
+
+
+
+
+
+
+
+
+
+
