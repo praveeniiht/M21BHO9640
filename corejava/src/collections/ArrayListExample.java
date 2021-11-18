@@ -1,5 +1,6 @@
 package collections;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.function.Predicate;
 
 public class ArrayListExample {
@@ -19,6 +20,10 @@ public class ArrayListExample {
 		ar.add("China");
 		ar.add("Srilanka");
 		ar.add("Japan");
+		System.out.println(ar);
+		
+		Collections.sort(ar);
+		System.out.println("After sorting...");
 		System.out.println(ar);
 		
 		ar1.add("America");
