@@ -19,4 +19,12 @@ public class Employee {
 	public void showData() {
 		System.out.println("Name = "+name+" Dept = "+dept);
 	}
+	
+	public void beaninit() {
+		System.out.println("Bean initalization is called....");
+	}
+	
+	public void beandestroy() {
+		System.out.println("Bean destroy method is called...");
+	}
 }
