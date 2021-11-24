@@ -1,7 +1,11 @@
 package test;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Employee {
 	String ename;
+	
+	@Autowired
 	Department dept;
 	
 	public String getEname() {
