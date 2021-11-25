@@ -32,7 +32,7 @@ public class TestServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		out.println("<html><body>");
-		out.println("<h1> Welcome to Servlets </h2>");
+		out.println("<h1 style=color:blue> Welcome to Servlets </h2>");
 		out.println("</body></html>");
 		out.close();
 		
