@@ -1,0 +1,118 @@
+
+public void checkCardValidity(){
+	// 
+}
+
+public void paymentByCash(){
+
+}
+
+public void paymentByNetbanking(){
+}
+
+
+public void paymentByCreditCard(){
+
+}
+
+
+checkCardValidity();
+
+
+paymentByCreditCard(){
+
+}
+
+checkBxxx1(){  }
+checkBxxx2(){  }
+checkBxxx3(){  }
+checkBxxx4(){  }
+
+checkAxxx1(){}
+checkAxxx2(){}
+checkAxxx3(){}
+checkAxxx4(){}
+
+
+
+
+
+call checkBxxxn();
+
+
+
+@Aspect
+class TransactionManagement{
+
+
+@JoinPoint
+@Around("method")
+
+public void atomocity(){
+
+}
+
+@JoinPoint
+public void integrity(){
+
+}
+
+}
+
+
+method
+atomocity();
+method
+
+
+@Autowired is used - Spring will automatically inject its implementation class for the 
+interface which is annotated with @Autowired
+
+
+If there are more than one implementation classes , then we have to specify the autowiring class
+by using @Qualifier annotation
+
+@Component  -- <bean ></bean>
+
+@Service,  @Repository, @Transactional  are sub compoents to @Component
+@Entity
+
+
+
+
+userid
+
+password
+
+class User{
+	String userid;
+	String password;
+}
+
+Create an applicatin for Posts Management system.
+The application should allow users to register them selves and could able to login.
+There are two types of users 1. users  2. Admins
+User should be validate from the database and Admin can be validate statically, with
+admin and 1234 as its user id and password.
+Once the user are validated, it should re direct to its appropriate pages ie user dash board
+or admin dashboard
+
+1. User dash board should consists of display, Insert and search for the Posts related task.
+
+2. Admin dash board should consists of User Search, User Insert and User delete tasks.
+
+The model class are:
+1. User(username, password)  - used by Admin
+2. Posts(pid,title,author,description)  - used by users
+
+The project should be created as the n-tier arch
+
+config  - All configuration details code
+Controller - All controller related code (AdminController , UserController)
+Dao --  UserDao, AdminDao
+Service - UserService and AdminService
+model - User and Posts
+
+
+The above application should be used with Spring, Spring MVC, Spring JDBC and /or
+Spring Forms
