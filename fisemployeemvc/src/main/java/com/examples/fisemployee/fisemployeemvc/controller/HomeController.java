@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.examples.fisemployee.fisemployeemvc.model.Fisemployee;
+import com.examples.fisemployee.fisemployeemvc.service.FisemployeeService;
 import com.examples.fisemployee.fisemployeemvc.service.FisemployeeServiceImpl;
 
 @Controller
@@ -35,6 +36,10 @@ public class HomeController {
 	@RequestMapping(value="/calInsert")
 	public String insertEmpData(@RequestParam("empid")int empid, @RequestParam("name") String name,
 			@RequestParam("department") String department, @RequestParam("designation")String designation) {
+		
+		// @RequestMapping(value="/calInsert")
+		// public String insertEmpData(@ModelAttribute("userForm") Fisemployee fis);
+		
 		Fisemployee fis = new Fisemployee(empid,name,department,designation);
 		
 		boolean temp = service.insertFisEmployee(fis);

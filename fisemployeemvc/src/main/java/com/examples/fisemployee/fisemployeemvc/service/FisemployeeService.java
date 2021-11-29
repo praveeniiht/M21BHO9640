@@ -11,4 +11,5 @@ public interface FisemployeeService {
 	public List<Fisemployee> getAllFisEmployees();
 	public boolean insertFisEmployee(Fisemployee fisemployee);
 	public Fisemployee searchFisEmployee(int empid);
+	
 }

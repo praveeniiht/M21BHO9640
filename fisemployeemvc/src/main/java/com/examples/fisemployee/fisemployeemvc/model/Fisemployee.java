@@ -1,5 +1,8 @@
 package com.examples.fisemployee.fisemployeemvc.model;
 
+import javax.persistence.Entity;
+
+
 public class Fisemployee {
 	int empid;
 	String name;

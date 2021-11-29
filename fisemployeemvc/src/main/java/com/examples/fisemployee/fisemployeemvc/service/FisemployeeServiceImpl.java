@@ -2,15 +2,22 @@ package com.examples.fisemployee.fisemployeemvc.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.examples.fisemployee.fisemployeemvc.dao.FisemployeeDao;
 import com.examples.fisemployee.fisemployeemvc.dao.FisemployeeDaoImpl;
 import com.examples.fisemployee.fisemployeemvc.model.Fisemployee;
 
+
+
 public class FisemployeeServiceImpl implements FisemployeeService{
+
 
 	FisemployeeDaoImpl repo;
 	
 	
-	public FisemployeeDaoImpl getRepo() {
+	public FisemployeeDao getRepo() {
 		return repo;
 	}
 
