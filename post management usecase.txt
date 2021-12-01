@@ -1,0 +1,26 @@
+Name: postservice
+port: 8081
+Table: post(pid(p),title,author,description,status)
+rest end points
+
+/postservice/post/all  --- to display all the postservice
+/postservice/post/add -- to add the give post
+/postservice/post/delete/{pid} -- to delete the post based on the given pid
+/postservice/post/search/{author}
+/postservice/post/search/{title}
+/postservice/post/update -- to update the existing post data
+
+
+Name: commentservice
+port: 8082
+Table: comments(cid,pid,commeter,comment)
+rest end points
+
+/commentservice/comment/all  --- to display all the postservice
+/commentservice/comment/add -- to add the give post
+/commentservice/comment/delete/{cid} -- to delete the post based on the given pid
+/commentservice/comment/search/{author}
+/commentservice/comment/search/{title}
+/commentservice/comment/update -- to update the existing post data
+
+
