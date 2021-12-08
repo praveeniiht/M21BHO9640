@@ -1,4 +1,9 @@
+
+<button (click)="getComments()">Click to Show</button>
+
 <h2 align=center style="color:blue">Comments Received for the Posts</h2>
+
+
 <table class='table' border=1>  
     <thead>  
         <tr>  
@@ -9,7 +14,7 @@
         </tr>  
     </thead>  
     <tbody>  
-        <tr *ngFor="let comment of comments;">  
+        <tr *ngFor="let comment of tcomments;">  
             <td>{{comment.cid}}</td>  
             <td>{{comment.commenter}}</td>  
             <td>{{comment.pid}}</td>  

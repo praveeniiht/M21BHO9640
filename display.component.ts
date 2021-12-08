@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommentService } from '../comment.service';
 import { Comments } from '../Comments';
 
 @Component({
@@ -8,7 +9,7 @@ import { Comments } from '../Comments';
 })
 export class DisplayComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:CommentService) { }
 
   comments: Comments[]=[
     {'cid':9001,'commenter':'sunil','pid':1001,'comment':'your notes is so simple'},
@@ -18,8 +19,17 @@ export class DisplayComponent implements OnInit {
     {'cid':9005,'commenter':'Anjali','pid':1004,'comment':'Can you explain more on this'}
 
   ];
+  tcomments:any;
 
   ngOnInit(): void {
+  }
+  getComments(){
+    this.service.getAllComments()
+    .subscribe( response =>{
+      this.tcomments=response;
+      console.log(response);
+    });
+  
   }
 
 }
