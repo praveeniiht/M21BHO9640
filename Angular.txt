@@ -1,0 +1,559 @@
+Angular is a development platform, built on TypeScript. As a platform, Angular includes:
+
+    A component-based framework for building scalable web applications
+    
+	A collection of well-integrated libraries that cover a wide variety of features, including routing, 
+	forms management, client-server communication, and more
+    
+	A suite of developer tools to help you develop, build, test, and update your code
+
+
+
+
+
+
+
+
+
+
+
+Angular 8 is an open source, TypeScript based frontend web application framework. 
+
+Angular 8 has been released by Google’s Angular community. 
+
+Angular 8 is a TypeScript based full-stack web framework for building web and mobile applications. 
+
+One of the major advantage is that the Angular 8 support for web application that can fit in any screen 
+resolution.
+
+Angular framework is based on four core concepts and they are as follows −
+
+    Components.
+	Components are the building blocks that compose an application. 
+   A component includes a TypeScript class with a @Component() decorator, an HTML template, and 
+   styles.
+   
+   Templates
+   Every component has an HTML template that declares how that component renders. 
+   We define this template either inline or by file path.
+   
+   
+
+
+    Templates with Data binding and Directives.
+    Modules.
+    Services and dependency injection.
+
+
+node --version  --  16
+nodejs -----  create the application 
+
+.ts  ------> TSC ------> .js ------> executed / rendered in the browser
+
+Visual Code 
+
+
+
+angular cli commands
+-------------------------------
+
+to Create a angular project ---  ng new <projectname>
+													  ng new notesui
+													
+													
+													
+													
+	To run the angular project:         ng serve --open
+	liveserver   ---  4200
+	
+	localhost:4200/
+	
+	
+	To create a component --    ng g c <component-name>
+	
+					                               ng g c display
+	
+	
+	With every component 4 files are created by default
+	1. component.ts ----> contains the data and processing related code(typescript)
+	2. component.html ---> contains the UI ie html code to display (html)
+	3. component.spec.ts ---> contains the unit testing related code(karma / jasmine)
+	4. component.css --> css style realted code for the component.html (css)
+	
+	Above 4 files are created exclusively for every component.
+	
+	app.module.ts ----> this will contain the components used in the project.
+	                                  we have to declare all the components to be used in the project
+									  
+	app-routing.module.ts ---> this will contain the code for component communication
+	                                                this will cotain the navigation information.
+	above two files are created for the complete project.
+TypeScript Datatypes
+-----------------------------
+
+ let/ var  variablename : datatype  = intialization_value;
+ 
+ var firstname: string="praveen";
+ var secondline : string="kumar';
+ var radius:number=1;
+ 
+ let isFound:boolean=false;
+ 
+ var 
+ 
+ 
+ 
+Static : at compile time" or "without running a program."
+			Built-in
+						Number:
+						String:
+						Boolean:
+						Null:
+						Void:
+						let unusable: void = undefined; 
+						let tempNum: void = undefined;  
+						tempNum = null;      
+						tempNum = 123;      //Error 
+			
+			any Type
+			
+			let data:any;
+			data=1001;
+			data="praveen";
+			data =true;
+			data=new Customer();
+			
+			
+
+			It is the "super type" of all data type in TypeScript. It is used to represents any 
+			JavaScript value. 
+			It allows us to opt-in and opt-out of type-checking during compilation
+			
+			
+			 let val: any = 'Hi';  
+			val = 555;   // OK  
+			val = true;   // OK    
+			
+			
+			
+		UserDefined 
+		
+			  Array  = Collection of homogenous data
+			  let name:array=[1,2,3,4];
+			  
+			  
+			  
+			  Class
+     class Student  
+    {  
+        RollNo: number;  
+        Name: string;   
+        
+		constructor(_RollNo: number, _Name: string)   
+        {  
+            this.RollNo = _RollNo;  
+            this.Name = _Name;  
+        }  
+        showDetails() : string
+        {  
+            console.log(this.rollNo + " : " + this.name);  
+			return rollNo;
+        }  
+    }
+	
+	
+			  
+			  Tuple
+			      // Declare a tuple  
+				let a: [string, number];  
+				// Initialize it  
+				a = ["hi", 8, "how", 5]; // OK  
+			  Enum
+			  Interface
+			      interface Calc {  
+							subtract (first: number, second: number): any;  
+					}  
+       
+				let Calculator: Calc = {  
+						subtract(first: number, second: number) {  
+								return first - second;  
+						}  
+				}  
+			  
+			  Functions 
+			  //named function with number as parameters type and return type  
+						function add(a: number, b: number): number {  
+									return a + b;  
+						}  
+				//anonymous function with number as parameters type and return type  
+						let sum = function (a: number, y: number): number {  
+												return a + b;  
+						};  
+			  
+
+Generics
+<T>
+
+
+Decorators
+A decorator is a special of data type which can be attached to a class declaration, method, 
+property, accessor, and parameter. 
+
+It provides a way to add both annotations and a meta-programing syntax for classes and 
+functions. It is used with "@" symbol.
+
+
+classes
+---------
+    class <class_name>{    
+        field;    
+        method;    
+    }  
+	
+	    class Student {  
+        studCode: number;  
+        studName: string;  
+      
+        constructor(code: number, name: string) {  
+                this.studName = name;  
+                this.studCode = code;  
+        }  
+      
+        getGrade() : string {  
+            return "A+" ;  
+        }  
+    }  
+	
+	interface interface_name {  
+          // variables' declaration  
+          // methods' declaration  
+}
+
+
+
+    interface Person {   
+       name:string    
+    }  
+    interface PersonDetail {   
+        age:number  
+        gender:string  
+    }  
+    interface Employee extends Person, PersonDetail {   
+        empCode:number  
+    }  
+    let empObject = <Employee>{};   
+    empObject.name = "Abhishek"  
+    empObject.age = 25   
+    empObject.gender = "Male"  
+    empObject.empCode = 43  
+    console.log("Name: "+empObject.name);  
+    console.log("Employee Code: "+empObject.empCode);  
+	
+	
+	Access Modifiers
+	public 
+	private
+	protected
+	
+	
+	@NgModule({ 
+			declarations:[AppComponent,
+									DisplayComponent
+									],
+			imports:[BrowserModule,
+							AppRoutingModule],
+			providers:[],
+			boostratp:[AppComponent]
+	})
+	class <clasname>{
+	
+		// methods;
+		//variables;
+	
+	}
+	
+	
+	
+	
+	deposit.component.ts
+	
+import {Component} from '@angular/core'	
+	@Component({
+		selector:' ',
+		templateUrl:''
+	})
+	export class DepositComponent{
+	
+	
+	
+	}
+	
+	Create angular application with following components
+	
+	CommentsUI
+	
+	
+	const routes: Routes = [
+  { path: 'first-component', component: FirstComponent },
+  { path: 'second-component', component: SecondComponent },
+];
+
+	{ path: '**', component: PageNotFoundComponent }
+	{path: '', redirectTo: '/heroes-list', pathMatch: 'full'},
+	
+	
+	1. AppComponent
+	
+	2. Register
+	
+	3. Display
+	
+	4. search
+	
+	ng new commentsui
+	ng g c register
+	ng g c display
+	ng g c search
+	
+	
+	class Validate{
+			var username: string;
+			var password: string;
+			
+			constructor(username:string, password:string, router: Routes)
+			{
+				this.username=username;
+				this.password=password;
+			}
+			validateLogin()
+			{
+				if(this.username=="admin" && this.password=="1234")
+						// redirect to login page;
+							router.sendReDirect("login");
+					
+				else
+						// redirect to failure page
+						router.sendReDirect("fail");
+			}
+	}
+	
+	user : Validate = new Validate("admin","1234");
+	
+	
+	class Student{
+	
+		Student(int a, int b, int c){
+		
+		
+		}
+	}
+	
+	Student st = new Student(10,20,30);
+	
+	Data Binding
+	------------------
+	1. One way Binding
+	
+			1. String Interpolation: {{  }}
+			
+			2. event binding
+			<button (click) = "showData()">Click here</button>
+			<button (click)="showData($event)">Click here</button>
+			
+			
+			export class TestComponent { 
+						showData($event: any){ 
+								console.log("button is clicked!"); if($event) { 
+								console.log($event.target); 
+								console.log($event.target.value); 
+								} 
+						}	 
+			}
+			
+			3. Property Binding	
+			<input type="text" [value]="userName">
+			
+		
+			
+			
+	2. Two way Binding
+	
+	NgModel is a standalone directive. ngModel directive binds form control to property 
+	and property to form control. 
+	
+	<HTML [(ngModel)]="model.name" />
+	<input type="text" [(ngModel)]="model.name" />
+	
+	To use the property binding, we have to import FormsModule
+	import { FormsModule } from '@angular/forms'; @NgModule({ 
+   imports: [ 
+      BrowserModule, 
+      FormsModule
+   ] 
+})
+	
+	
+	
+	
+	
+	one way binding
+	
+	1. string interpolation : {{ }} -- bind the value to the html element
+	2. event binding:            ()  -- bind an event like onclick, onmouseover, onmouseout
+	3. property Binding:      [] -- bind a value to the property of a html tag
+	
+	Two way binding
+	---------------------------
+	[(ngModel)]   ="modelname"
+	
+	
+Angular 8 directives can be classified in 3 categories based on how they behave:
+
+    Component Directives
+    Structural Directives
+    Attribute Directives
+	
+Component Directives: Component directives are used in main class. 
+They contain the detail of how the component should be processed, instantiated and used 
+at runtime.
+
+Structural Directives: Structural directives start with a * sign. 
+These directives are used to manipulate and change the structure of the DOM elements.
+ For example, *ngIf directive, *ngSwitch directive, and *ngFor directive.
+ 
+ 
+ Attribute Directives: Attribute directives are used to change the look and behavior of the DOM elements. For example: ngClass directive, and ngStyle directive etc.
+
+    ngClass Directive: The ngClass directive is used to add or remove CSS classes to an 
+	HTML element.
+    
+	ngStyle Directive: The ngStyle directive facilitates you to modify the style of an 
+	HTML element using the expression. You can also use ngStyle directive to dynamically
+	change the style of your HTML element.
+	
+	
+	*ngIf
+	
+	    <p *ngIf="condition">  
+        condition is true and ngIf is true.  
+    </p>  
+    <p *ngIf="!condition">  
+        condition is false and ngIf is false.  
+    </p>  
+	
+	ngIf with else
+	-------------------
+	    <div *ngIf="condition; else elseBlock">  
+    Content to render when condition is true.  
+    </div>  
+ 
+	<ng-template #elseBlock>  
+    Content to render when condition is false.  
+    </ng-template>  
+	
+	
+	    @Component({  
+      selector: 'ng-if-else',  
+      template: `  
+        <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>  
+        show = {{show}}  
+        <br>  
+        <div *ngIf="show; else elseBlock">Text to show</div>  
+        <ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>  
+    `  
+    })  
+    export class NgIfElse {  
+      show: boolean = true;  
+    }  
+	
+	
+	ngFor
+	--------
+	    <li *ngFor="let item of items;"> .... </li>  
+		
+		
+    import { Component } from '@angular/core';  
+    @Component({  
+        selector: 'movie-app',  
+        templateUrl:'./app/app.component.html',  
+        styleUrls:['./app/app.component.css']  
+    })  
+    export class AppComponent   
+    {   
+        title: string ="Top 10 Movies" ;  
+        movies: Movie[] =[  
+            {title:'Zootopia',director:'Byron Howard, Rich Moore',cast:'Idris Elba, Ginnifer Goodwin, Jason Bateman',releaseDate:'March 4, 2016'},  
+            {title:'Batman v Superman: Dawn of Justice',director:'Zack Snyder',cast:'Ben Affleck, Henry Cavill, Amy Adams',releaseDate:'March 25, 2016'},  
+            {title:'Captain America: Civil War',director:'Anthony Russo, Joe Russo',cast:'Scarlett Johansson, Elizabeth Olsen, Chris Evans',releaseDate:'May 6, 2016'},  
+            {title:'X-Men: Apocalypse',director:'Bryan Singer',cast:'Jennifer Lawrence, Olivia Munn, Oscar Isaac',releaseDate:'May 27, 2016'},  
+        ]  
+    }   
+    class Movie {  
+        title : string;  
+        director : string;  
+        cast : string;  
+        releaseDate : string;  
+    }  
+	
+	    <div class='panel panel-primary'>  
+        <div class='panel-heading'>  
+            {{title}}  
+        </div>   
+        <div class='panel-body'>  
+            <div class='table-responsive'>  
+                <table class='table'>  
+                    <thead>  
+                        <tr>  
+                            <th>Title</th>  
+                            <th>Director</th>  
+                            <th>Cast</th>  
+                            <th>Release Date</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr *ngFor="let movie of movies;">  
+                            <td>{{movie.title}}</td>  
+                            <td>{{movie.director}}</td>  
+                            <td>{{movie.cast}}</td>  
+                            <td>{{movie.releaseDate}}</td>  
+                        </tr>  
+                    </tbody>  
+                </table>  
+            </div>  
+        </div>  
+    </div>  
+	
+	
+	ngSwitch
+	--------------
+	
+	    <container_element [ngSwitch]="switch_expression">  
+        <inner_element *ngSwitchCase="match_expresson_1">...</inner_element>  
+        <inner_element *ngSwitchCase="match_expresson_2">...</inner_element>  
+        <inner_element *ngSwitchCase="match_expresson_3">...</inner_element>  
+        <inner_element *ngSwitchDefault>...</element>  
+    </container_element>   
+	
+	    class item {  
+        name: string;  
+        val: number;  
+    }  
+    export class AppComponent  
+    {  
+        items: item[] = [{name: 'One', val: 1}, {name: 'Two', val: 2}, {name: 'Three', val: 3}];  
+        selectedValue: string= 'One';  
+    }  
+	
+	<select [(ngModel)]="selectedValue">  
+    <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>  
+</select>  
+<div class='row' [ngSwitch]="selectedValue">  
+    <div *ngSwitchCase="'One'">One is Pressed</div>  
+    <div *ngSwitchCase="'Two'">Two is Selected</div>  
+    <div *ngSwitchDefault>Default Option</div>  
+</div>
+
+
+	
+	
+	
