@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { CommentService } from '../comment.service';
 import { Comments } from '../Comments';
 
 @Component({
@@ -14,15 +16,26 @@ export class RegisterComponent implements OnInit {
   comment=' your notes is so simple';
   
 
-  constructor() { }
+  constructor(private service: CommentService) { }
 
   ngOnInit(): void {
    
 
   }
+  
+
   postComment(){
+    let comment : Comments = {
+      "cid":this.cid,
+      "commenter":this.commenter,
+      "pid":this.pid,
+      "comment":this.comment
+    }
+    
+    this.service.postComment(comment);
     // write the code for the springboot connectivity
-    console.log(this.cid+' '+this.commenter+" "+this.pid+' '+this.comment);
+    console.log(comment.comment);
+    
   }
 
 }
